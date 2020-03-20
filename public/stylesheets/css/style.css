@@ -1,0 +1,40 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+
+  main{
+      margin-left: 20%;
+  }
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+.sidebar-sticky>.nav>.nav-item{
+    padding-top: 2em;
+}
+.active {
+    color: rgb(121, 0, 40);
+}   
+.footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(7, 0, 0);
+    color: white;
+    text-align:right;
+    padding: 0.5%;
+    z-index: 101;
+ }
+ /* Form */
+ #success_message{ display: none;}
