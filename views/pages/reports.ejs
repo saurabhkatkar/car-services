@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+
+  </head>
+  <body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+    
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-5">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Reports</h1>
+          
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">ShowRoom Id</th>
+                <th scope="col">ShowRoom Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Sales</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>1001</td>
+                <td>Jayz Cars</td>
+                <td>Mumbai</td>
+                <td>100</td>
+                <td>4.5</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>1005</td>
+                <td>Thornton Car Sales</td>
+                <td>Pune</td>
+                <td>35</td>
+                <td>3.3</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>1002</td>
+                <td>The Bird Cars</td>
+                <td>Thane</td>
+                <td>50</td>
+                <td>3.5</td>
+              </tr>
+            </tbody>
+          </table>
+        
+  
+      </main>
+         
+    
+
+    
+    <footer>
+        <%  include ../partials/footer %>
+        <script>
+          $('#reports-nav').addClass('active');
+        </script>
+    </footer>
+    
+</body>
+</html>

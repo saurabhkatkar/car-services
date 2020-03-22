@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+    
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-5">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Services</h1>
+        
+      </div>
+      <form>
+          <div class="form-row">
+              <div class="col-md-5 mb-3">
+              <label for="validationDefault01">ShowRoom Id</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="ShowRoom" required>
+              </div>
+              <div class="col-md-5 mb-3">
+              <label for="validationDefault02">Customer Id</label>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="Customer" required>
+              </div>
+              
+          </div>
+          
+          <div class="form-row">
+              <div class="col-md-8 mb-3">
+                    <label for="validationEmail">Detail List of services</label>
+                    <textarea type="text" class="form-control" id="validationServices" placeholder="Services" rows="5" required ></textarea>
+              </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-8 mb-3">
+                  <label for="validationEmail">Total Cost of Services</label>
+                  <input type="number" class="form-control" id="validationCost" placeholder="Cost" required>
+            </div>
+        </div>
+         
+          <button class="btn btn-primary" type="submit">Submit Record</button>
+      </form>
+
+    </main>
+    
+
+    
+    <footer>
+        <%  include ../partials/footer %>
+        <script>
+          $('#services-nav').addClass('active');
+        </script>
+    </footer>
+    
+</body>
+</html>
+
