@@ -40,36 +40,12 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-  // var userId = firebase.auth().currentUser.uid;
- 
-
-
-
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/sales', salesRouter);
 app.use('/services', servicesRouter);
 app.use('/customers', custRouter);
 app.use('/reports', reportsRouter);
-
-app.post('/services/add', (req, res) => {
-  
-  var sid,cid;
-  sid = req.body.showroomId;
-  cid = req.body.customerId;
-  addServices(sid,cid);
-  res.redirect('/services');
-})
-
-async function addServices(sid,cid){
-  await firebase.database().ref('/customers/cusid').once('value').then( function(snapshot) {
-    console.log(snapshot.val().fname);
-    // ...
-  });
-  console.log("Form Data is :",sid,cid);
-
-}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

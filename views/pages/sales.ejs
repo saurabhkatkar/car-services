@@ -14,15 +14,15 @@
         <h1 class="h2">Sales</h1>
         
       </div>
-      <form>
+      <form method="POST" action="/sales/add">
           <div class="form-row">
               <div class="col-md-5 mb-3">
               <label for="validationDefault01">First name</label>
-              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" name="fname" required>
               </div>
               <div class="col-md-5 mb-3">
               <label for="validationDefault02">Last name</label>
-              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" name="lname" required>
               </div>
               
           </div>
@@ -30,42 +30,38 @@
           <div class="form-row">
               <div class="col-md-5 mb-3">
                     <label for="validationEmail">Email</label>
-                    <input type="email" class="form-control" id="validationEmail" placeholder="Email" required>
+                    <input type="email" class="form-control" id="validationEmail" placeholder="Email" name="email" required>
               </div>
           </div>
           <span>Car Details</span>
           <div class="form-row mt-3">
               <div class="col-md-5 mb-3">
                     <label for="validationCar01">Car Type</label>
-                    <input type="text" class="form-control" id="validationCar01" placeholder="Type" required>
+                    <input type="text" class="form-control" id="validationCar01" placeholder="Type" name="ctype" required>
               </div>
               <div class="col-md-5 mb-3">
                     <label for="validationCar02">Car Model</label>
-                    <input type="text" class="form-control" id="validationCar02" placeholder="Model" required>
+                    <input type="text" class="form-control" id="validationCar02" placeholder="Model" name="cmodel" required>
               </div>
           </div>
           <div class="form-row">
               <div class="col-md-5 mb-3">
                     <label for="validationCar03">Car Price ($)</label>
-                    <input type="text" class="form-control" id="validationCar03" placeholder="Price" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                    <label for="validationCar04">Car Units</label>
-                    <input type="number" class="form-control" id="validationCar04" placeholder="Units" value="0" required>
+                    <input type="text" class="form-control" id="validationCar03" placeholder="Price" name="cprice" required>
               </div>
           </div>
           <div class="form-row">
               <div class="col-md-6 mb-3">
               <label for="validationDefault03">City</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="City" name="city" required>
               </div>
               <div class="col-md-3 mb-3">
               <label for="validationDefault04">State</label>
-              <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+              <input type="text" class="form-control" id="validationDefault04" placeholder="State" name="state" required>
               </div>
               <div class="col-md-3 mb-3">
               <label for="validationDefault05">Zip</label>
-              <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+              <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" name="zip" required>
               </div>
           </div>
           <button class="btn btn-primary" type="submit">Submit Record</button>

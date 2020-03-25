@@ -13,12 +13,11 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-5">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Reports</h1>
-          
+          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#reportsModal">Add Report  </button>
         </div>
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">ShowRoom Id</th>
                 <th scope="col">ShowRoom Name</th>
                 <th scope="col">Address</th>
@@ -27,35 +26,76 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>1001</td>
-                <td>Jayz Cars</td>
-                <td>Mumbai</td>
-                <td>100</td>
-                <td>4.5</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>1005</td>
-                <td>Thornton Car Sales</td>
-                <td>Pune</td>
-                <td>35</td>
-                <td>3.3</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>1002</td>
-                <td>The Bird Cars</td>
-                <td>Thane</td>
-                <td>50</td>
-                <td>3.5</td>
-              </tr>
+              <% reports.forEach(function(rep){ %>
+                <tr>
+                  <th scope="row"><%= rep.sid %></th>
+                  <td><%= rep.sname %></td>
+                  <td><%= rep.address %></td>
+                  <td><%= rep.sales %></td>
+                  <td><%= rep.rate %></td>
+                </tr>
+                
+              <% })%>
             </tbody>
           </table>
         
   
       </main>
+
+    <!-- Modal -->
+<div class="modal fade" id="reportsModal" tabindex="-1" role="dialog" aria-labelledby="reportsModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reportsModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  method="POST" action="/reports/add">
+          <div class="form-row">
+            <div class="col-md-8 mb-3">
+              <label for="validationDefault01">Showroom-Id</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="Showroom Id" name="sid" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-8 mb-3">
+              <label for="validationDefault01">ShowRoom name</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="First name" name="sname" required>
+            </div>
+            
+        </div>
+          
+        <div class="form-row">
+          <div class="col-md-8 mb-3">
+            <label for="validationDefault01">Address</label>
+            <textarea type="text" class="form-control" id="validationDefault01" placeholder="Address" name="address" required rows="3"></textarea>
+          </div>     
+      </div>
+      <div class="form-row">
+        <div class="col-md-8 mb-3">
+          <label for="validationDefault02">Sales</label>
+          <input type="text" class="form-control" id="validationDefault02" placeholder="Total Sales" name="sales" required>
+        </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-8 mb-3">
+            <label for="validationDefault02">Rating</label>
+            <input type="text" class="form-control" id="validationDefault02" placeholder="Out Of 5" name="rate" required>
+          </div>
+          </div>
+
+        <button class="btn btn-primary" type="submit">Submit Record</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
          
     
 
